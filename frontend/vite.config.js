@@ -14,12 +14,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      }
-    }
+    minify: 'esbuild'
   },
   esbuild: {
     // Disable eval for CSP compliance
