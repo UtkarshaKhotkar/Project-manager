@@ -27,7 +27,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <span className="logo-icon">⚡</span>
+          <span className="logo-icon"></span>
           Full Stack App
         </Link>
         <ul className="nav-menu">
@@ -88,28 +88,28 @@ function Dashboard() {
         <h1>Dashboard</h1>
         <div className="stats-grid">
           <div className="stat-card">
-            <div className="stat-icon">👥</div>
+            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>Total Users</h3>
               <p className="stat-number">{stats.users}</p>
             </div>
           </div>
           <div className="stat-card">
-            <div className="stat-icon">🚀</div>
+            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>API Status</h3>
               <p className="stat-status">{stats.status}</p>
             </div>
           </div>
           <div className="stat-card">
-            <div className="stat-icon">📊</div>
+            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>Projects</h3>
               <p className="stat-number">{stats.projects}</p>
             </div>
           </div>
           <div className="stat-card">
-            <div className="stat-icon">✅</div>
+            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>Tasks</h3>
               <p className="stat-number">{stats.tasks}</p>
@@ -934,3 +934,4 @@ function About() {
 }
 
 export default App;
+
