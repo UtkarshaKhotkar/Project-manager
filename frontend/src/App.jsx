@@ -51,7 +51,7 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    // Check API status
+    
     axios.get(API_URL)
       .then(response => {
         setStats(prev => ({ ...prev, status: response.data.message }));
@@ -60,7 +60,7 @@ function Dashboard() {
         setStats(prev => ({ ...prev, status: 'API Error' }));
       });
 
-    // Get users count
+    
     axios.get(`${API_URL}/users`)
       .then(response => {
         setStats(prev => ({ ...prev, users: response.data.length }));
@@ -88,28 +88,24 @@ function Dashboard() {
         <h1>Dashboard</h1>
         <div className="stats-grid">
           <div className="stat-card">
-            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>Total Users</h3>
               <p className="stat-number">{stats.users}</p>
             </div>
           </div>
           <div className="stat-card">
-            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>API Status</h3>
               <p className="stat-status">{stats.status}</p>
             </div>
           </div>
           <div className="stat-card">
-            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>Projects</h3>
               <p className="stat-number">{stats.projects}</p>
             </div>
           </div>
           <div className="stat-card">
-            <div className="stat-icon"></div>
             <div className="stat-content">
               <h3>Tasks</h3>
               <p className="stat-number">{stats.tasks}</p>
@@ -121,17 +117,17 @@ function Dashboard() {
           <p>This application demonstrates a complete full stack setup with React frontend and Node.js/Express backend.</p>
           <div className="features">
             <div className="feature">
-              <span className="feature-icon">⚡</span>
+              <span className="feature-icon"></span>
               <h3>Fast & Modern</h3>
               <p>Built with React 18 and Vite for lightning-fast development</p>
             </div>
             <div className="feature">
-              <span className="feature-icon">🔒</span>
+              <span className="feature-icon"></span>
               <h3>Secure API</h3>
               <p>RESTful API with Express.js and CORS protection</p>
             </div>
             <div className="feature">
-              <span className="feature-icon">📱</span>
+              <span className="feature-icon"></span>
               <h3>Responsive</h3>
               <p>Mobile-first design that works on all devices</p>
             </div>
@@ -269,7 +265,6 @@ function Users() {
             <div className="loading">Loading users...</div>
           ) : users.length === 0 ? (
             <div className="empty-state">
-              <span className="empty-icon">👥</span>
               <h3>No users yet</h3>
               <p>Click "Add User" to create your first user</p>
             </div>
@@ -291,8 +286,8 @@ function Users() {
                       <td>{user.email}</td>
                       <td>{new Date(user.createdAt).toLocaleDateString()}</td>
                       <td>
-                        <button className="btn-icon" onClick={() => handleEdit(user)}>✏️</button>
-                        <button className="btn-icon" onClick={() => handleDelete(user.id)}>🗑️</button>
+                        <button className="btn-icon" onClick={() => handleEdit(user)}>Edit</button>
+                        <button className="btn-icon" onClick={() => handleDelete(user.id)}>Delete</button>
                       </td>
                     </tr>
                   ))}
@@ -517,7 +512,7 @@ function Projects() {
             <div className="loading">Loading projects...</div>
           ) : projects.length === 0 ? (
             <div className="empty-state">
-              <span className="empty-icon">📊</span>
+              <span className="empty-icon"></span>
               <h3>No projects yet</h3>
               <p>Click "Add Project" to create your first project</p>
             </div>
@@ -535,8 +530,8 @@ function Projects() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
                     <h3 style={{ margin: 0, color: '#333', fontSize: '1.25rem' }}>{project.name}</h3>
                     <div>
-                      <button className="btn-icon" onClick={() => handleEdit(project)}>✏️</button>
-                      <button className="btn-icon" onClick={() => handleDelete(project.id)}>🗑️</button>
+                      <button className="btn-icon" onClick={() => handleEdit(project)}></button>
+                      <button className="btn-icon" onClick={() => handleDelete(project.id)}></button>
                     </div>
                   </div>
                   <p style={{ color: '#666', marginBottom: '1rem', fontSize: '0.9rem' }}>{project.description}</p>
@@ -563,8 +558,8 @@ function Projects() {
                     </span>
                   </div>
                   <div style={{ fontSize: '0.85rem', color: '#666' }}>
-                    <div>📅 Start: {new Date(project.startDate).toLocaleDateString()}</div>
-                    {project.endDate && <div>🏁 End: {new Date(project.endDate).toLocaleDateString()}</div>}
+                    <div>Start: {new Date(project.startDate).toLocaleDateString()}</div>
+                    {project.endDate && <div>End: {new Date(project.endDate).toLocaleDateString()}</div>}
                   </div>
                 </div>
               ))}
@@ -789,7 +784,7 @@ function Tasks() {
             <div className="loading">Loading tasks...</div>
           ) : tasks.length === 0 ? (
             <div className="empty-state">
-              <span className="empty-icon">✅</span>
+              <span className="empty-icon"></span>
               <h3>No tasks yet</h3>
               <p>Click "Add Task" to create your first task</p>
             </div>
@@ -840,8 +835,8 @@ function Tasks() {
                       <td>{task.assignedTo || '-'}</td>
                       <td>{task.dueDate ? new Date(task.dueDate).toLocaleDateString() : '-'}</td>
                       <td>
-                        <button className="btn-icon" onClick={() => handleEdit(task)}>✏️</button>
-                        <button className="btn-icon" onClick={() => handleDelete(task.id)}>🗑️</button>
+                        <button className="btn-icon" onClick={() => handleEdit(task)}></button>
+                        <button className="btn-icon" onClick={() => handleDelete(task.id)}></button>
                       </td>
                     </tr>
                   ))}
@@ -862,7 +857,7 @@ function About() {
         <h1>About This Application</h1>
         <div className="about-content">
           <section className="about-section">
-            <h2>🚀 Technology Stack</h2>
+            <h2>Technology Stack</h2>
             <div className="tech-grid">
               <div className="tech-item">
                 <h3>Frontend</h3>
@@ -886,19 +881,19 @@ function About() {
           </section>
 
           <section className="about-section">
-            <h2>✨ Features</h2>
+            <h2>Features</h2>
             <ul className="features-list">
-              <li>✅ RESTful API architecture</li>
-              <li>✅ User CRUD operations</li>
-              <li>✅ Responsive design</li>
-              <li>✅ Modern UI/UX</li>
-              <li>✅ Form validation</li>
-              <li>✅ Error handling</li>
+              <li>RESTful API architecture</li>
+              <li>User CRUD operations</li>
+              <li>Responsive design</li>
+              <li>Modern UI/UX</li>
+              <li>Form validation</li>
+              <li>Error handling</li>
             </ul>
           </section>
 
           <section className="about-section">
-            <h2>📚 API Endpoints</h2>
+            <h2>API Endpoints</h2>
             <div className="api-docs">
               <div className="endpoint">
                 <span className="method get">GET</span>
@@ -934,4 +929,3 @@ function About() {
 }
 
 export default App;
-
