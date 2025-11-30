@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a2332 0%, #4a3728 100%);
 }
 
 /* Navbar */
@@ -25,7 +25,7 @@
 .nav-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #667eea;
+  color: #2c5282;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -54,8 +54,8 @@
 }
 
 .nav-link:hover {
-  color: #667eea;
-  background: rgba(102, 126, 234, 0.1);
+  color: #2c5282;
+  background: rgba(44, 82, 130, 0.1);
 }
 
 /* Container */
@@ -111,7 +111,7 @@
 .stat-number {
   font-size: 2rem;
   font-weight: bold;
-  color: #667eea;
+  color: #2c5282;
   margin: 0.5rem 0 0 0;
 }
 
@@ -200,14 +200,14 @@
 }
 
 .btn-primary {
-  background: #667eea;
+  background: #2c5282;
   color: white;
 }
 
 .btn-primary:hover {
-  background: #5568d3;
+  background: #1e3a5f;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(44, 82, 130, 0.4);
 }
 
 .btn-secondary {
@@ -362,7 +362,7 @@
 }
 
 .about-section h2 {
-  color: #667eea;
+  color: #2c5282;
   margin-bottom: 1rem;
 }
 
