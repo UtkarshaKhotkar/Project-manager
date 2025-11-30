@@ -113,18 +113,18 @@ function Dashboard() {
           </div>
         </div>
         <div className="welcome-section">
-          <h2>Welcome to Your Full Stack Application</h2>
-          <p>This application demonstrates a complete full stack setup with React frontend and Node.js/Express backend.</p>
+          <h2>Welcome to Your Project Manager</h2>
+          <p>Manage your organisation with an all in one managing dashboard.</p>
           <div className="features">
             <div className="feature">
               <span className="feature-icon"></span>
               <h3>Fast & Modern</h3>
-              <p>Built with React 18 and Vite for lightning-fast development</p>
+              <p>Run your organisation with this API</p>
             </div>
             <div className="feature">
               <span className="feature-icon"></span>
               <h3>Secure API</h3>
-              <p>RESTful API with Express.js and CORS protection</p>
+              <p>Smooth experience</p>
             </div>
             <div className="feature">
               <span className="feature-icon"></span>
@@ -929,3 +929,4 @@ function About() {
 }
 
 export default App;
+
